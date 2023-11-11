@@ -31,6 +31,6 @@ app.use('/api/clients', require('./routes/client.routes'));
 
 // listen request
 
-app.listen(process.env.PORT, ()=> {
+app.listen(process.env.PORT || 5000, ()=> {
     console.log(`Express server running on port ${process.env.PORT}`);
 });
