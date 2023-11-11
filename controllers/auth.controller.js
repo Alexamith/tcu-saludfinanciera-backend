@@ -39,7 +39,7 @@ const renewToken = async (req, res) =>{
 const userUniqueValuesValidation = async (data, res) => {
     let user = await User.findOne(data);
     if (!user) {
-       await validationStatus400(res,`Email is not correct`);
+       await validationStatus400(res,`El usuario o la contraseña no existen`);
        return false;
     }
     return user;
