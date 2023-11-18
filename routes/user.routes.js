@@ -16,9 +16,10 @@ router.post(
   [
     //middlewares
     check("name", "The name is required").not().isEmpty(),
+    check("firstLastName", "The first kastName is required").not().isEmpty(),
+    check("secondLastName", "The second last name is required").not().isEmpty(),
     check("email", "The email is required").isEmail(),
     check("password", "The password is required").not().isEmpty(),
-    check("companyId", "The companyId is required").not().isEmpty(),
     check("administrator", "The administrator is required").not().isEmpty(),
     validateInputs,
   ],
